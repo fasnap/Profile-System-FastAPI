@@ -6,7 +6,7 @@ def create_student(db: Session, student: schemas.StudentCreate):
         name=student.name,
         email=student.email,
         phone=student.phone,
-        password=student.password  # Password should be hashed in production
+        password=student.password 
     )
     db.add(db_student)
     db.commit()

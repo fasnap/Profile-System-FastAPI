@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "abd4db86-01a3-4d9c-a6e0-23f941e3a07d",
+		"name": "Student Profile API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18397607"
+	},
+	"item": [
+		{
+			"name": "Successfull Profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"fasnap\",\n    \"email\": \"fasnap@example.com\",\n    \"phone\": \"5467397576\",\n    \"password\": \"Fasnap123!\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create-profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create-profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Failed profile",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"student\",\n    \"email\": \"student@example.com\",\n    \"phone\": \"5467397576\",\n    \"password\": \"stdud\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/create-profile",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"create-profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

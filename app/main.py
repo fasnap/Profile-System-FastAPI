@@ -20,11 +20,8 @@ def create_profile(student: schemas.StudentCreate, db: Session = Depends(get_db)
 
     # Create and save student profile
     created_student = crud.create_student(db, student)
-    return {
-        "message": "Profile created successfully",
-        "profile": {
-            "name": created_student.name,
-            "email": created_student.email,
-            "phone": created_student.phone
-        }
-    }
+    return schemas.StudentResponse(
+        name=created_student.name,
+        email=created_student.email,
+        phone=created_student.phone,
+    )

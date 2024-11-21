@@ -102,23 +102,22 @@ The request body should contain the student's information to create a profile. H
 
 ```json
 {
-    "name": "John Doe",
-    "email": "johndoe@example.com",
-    "phone": "1234567890",
-    "password": "Password123!"
+    "name": "fasnap",
+    "email": "fasnap@example.com",
+    "phone": "5467397576",
+    "password": "Fasnap123!"
 }
 ```
 #### Response Body:
 ```json
 {
-    "message": "Profile created successfully",
-    "profile": {
-        "name": "John Doe",
-        "email": "johndoe@example.com",
-        "phone": "1234567890"
-    }
+    "name": "fasnap",
+    "email": "fasnap@example.com",
+    "phone": "5467397576"
 }
+    
 ```
+
 #### Error Responses:
 ```json
 {
@@ -126,3 +125,26 @@ The request body should contain the student's information to create a profile. H
 }
 ```
 
+## Postman Collection
+
+To help you easily test the API, a **Postman collection** is included with sample input data.
+
+### How to Import the Postman Collection:
+
+1. Open **Postman**.
+2. Click on **File** > **Import**.
+3. Select the `Student Profile API.postman_collection.json` file included in the project.
+4. Once imported, you can run the requests directly from the collection.
+
+### Sample Data for `/create-profile` Request:
+
+**Request Body Example:**
+
+```json
+{
+    "name": "fasnap",
+    "email": "fasnap@example.com",
+    "phone": "5467397576",
+    "password": "Fasnap123!"
+}
+```
